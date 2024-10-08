@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="h-full">
+  <!-- start  -->
+  <div class="min-h-full">
+    <nav class="bg-slate-100 fixed top-0 left-0 w-full z-50 border-b-2 border-slate-900" x-data="{isOpen:false}">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="#home" class="flex items-center">
+                <img src="./img/LOGO.png" class="mr-3 h-6 sm:h-9" alt="mega briquette logo Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CV. Mega
+                  Briquette</span>
+              </a>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a href="home.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="gallery.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="produk.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Products</a>
+                <a href="news.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
+                <a href="contact.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6"></div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button type="button" @click="isOpen = !isOpen"
+              class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg :class="{'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg :class="{'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div x-show="isOpen" class="md:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3" @click="isOpen = false">
+          <a href="home.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="gallery.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+          <a href="produk.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Products</a>
+          <a href="news.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">News</a>
+          <a href="contact.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- end -->
+
+<!-- section pertama start -->
+
+    <!-- <section class=" mt-20 mx-4">
+        
+        <div class="text-center max-w-4xl mx-auto py-6 rounded-3xl bg-primary-10">
+         <h1 class="text-white font-bold text-3xl">Exclusive  <span class="text-primary-30">Briquette</span></h1>
+         <p class="text-white font-normal text-lg pt-2">Kami bekerja untuk membangun masa depan kesuksesan bersama</p>
+          
+        </div>
+      </section> -->
+
+      <!-- <section class="mt-20 mx-4">
+        <div class="text-center py-6 max-w-4xl mx-auto rounded-3xl bg-primary-10 relative">
+            <h1 class="text-white font-bold text-3xl">
+                Exclusive <span class="text-primary-30 relative inline-block">Briquette</span>
+            </h1>
+            <div class="hidden lg:block md:block sm:block  handwritten-line"></div> 
+                      <p class="text-white font-normal text-lg pt-2">Kami bekerja untuk membangun masa depan kesuksesan bersama</p>
+        </div>
+    </section> -->
+    
+
+    <section class="mt-20 mx-4">
+        <div class="text-center py-6 max-w-4xl mx-auto rounded-3xl bg-primary-10 shadow-red-700 shadow-inner- relative">
+            <h1 class="text-white font-bold text-3xl">
+                Exclusive <span class="text-primary-30 relative inline-block">Briquette</span>
+            </h1>
+            <div class="hidden lg:block md:block sm:block handwritten-line"></div>
+            <p class="text-white font-normal text-lg pt-2">Kami bekerja untuk membangun masa depan kesuksesan bersama</p>
+        </div>
+    </section>
+    
+    
+
+<!-- section pertama end-->
+
+<!-- section keduastart -->
+<section class="mb-10 py-10 produk" id="produk">
+    <div class="max-w-7xl mx-auto p-4 text-slate-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Kolom 1 -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg relative" onclick="showPopup('shisha')">
+          <img src="./img/6.png" alt="Shisha Briquette" class="w-full h-auto object-cover " />
+          <!-- Set tinggi tetap untuk gambar -->
+          <div class="p-4 text-center bg-slate-400 absolute bottom-0 left-0 right-0">
+            <h3 class="text-lg md:text-xl font-bold mb-2 hover:text-red-500">
+              Shisha Briquette
+            </h3>
+            <!-- Sesuaikan ukuran font -->
+            <a href="#" class="text-lg font-bold text-yellow-400 hover:text-red-600 hover:underline">Detail Produk</a>
+          </div>
+        </div>
+        <!-- Kolom 2 -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg relative" onclick="showPopup('hexagonal')">
+          <img src="./img/7.png" alt="Shisha Briquette" class="w-full h-auto object-cover" />
+          <!-- Set tinggi tetap untuk gambar -->
+          <div class="p-4 text-center bg-slate-400 absolute bottom-0 left-0 right-0">
+            <h3 class="text-lg md:text-xl font-bold mb-2 hover:text-red-500">
+              Hexagonal Briquette
+            </h3>
+            <!-- Sesuaikan ukuran font -->
+            <a href="#" class="text-lg font-bold text-yellow-400 hover:text-red-600 hover:underline">Detail Produk</a>
+          </div>
+        </div>
+        <!-- Kolom 3 -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg relative" onclick="showPopup('bbq')">
+          <img src="./img/8.png" alt="Shisha Briquette" class="w-full h-auto object-cover " />
+          <!-- Set tinggi tetap untuk gambar -->
+          <div class="p-4 text-center bg-slate-400 absolute bottom-0 left-0 right-0">
+            <h3 class="text-lg md:text-xl font-bold mb-2 hover:text-red-500">
+              Barbeque Briquette
+            </h3>
+            <!-- Sesuaikan ukuran font -->
+            <a href="#" class="text-lg font-bold text-yellow-400 hover:text-red-600 hover:underline">Detail Produk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- section keduasend -->
+
+
+    <!-- footer start -->
+
+    <footer class="bg-primary-30 text-white pt-6">
+      <div class="container mx-auto flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0">
+        <!-- Logo Section -->
+        <div class="flex flex-col">
+          <a href="#" class="flex mb-6 mx-6 lg:mx-0">
+            <img src="./img/logowh.png" alt="Logo Mega Briquette" class="w-32" />
+          </a>
+          <div>
+            <a href="https://wa.me/0813545456565"
+              class="mx-6 lg:mx-0 inline-flex items-center bg-gradient-to-r from-green-400 to-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links Section -->
+        <div class="flex flex-col mx-6">
+          <a href="home.html" class="hover:text-red-400 transition-colors font-semibold">Akses All Page</a>
+          <a href="home.html" class="hover:text-red-400 transition-colors">Home</a>
+          <a href="gallery.html" class="hover:text-red-400 transition-colors">Gallery</a>
+          <a href="produk.html" class="hover:text-red-400 transition-colors">Products</a>
+          <a href="news.html" class="hover:text-red-400 transition-colors">News</a>
+          <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+        </div>
+
+        <!-- Social Media Links Section -->
+        <div class="flex flex-col mx-6">
+          <a href="#" class="hover:text-red-400 transition-colors font-semibold">Contact Us</a>
+          <a href="#" class="hover:text-red-400 transition-colors">admmega@gmail.com</a>
+          <a href="https://wa.me/628888990888" class="hover:text-red-400 transition-colors">(+62)888 8990 888</a>
+          <a href="https://wa.me/628888990888" class="hover:text-red-400 transition-colors">(+62)888 8990 888</a>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="text-center mt-4 bg-slate-800 text-white font-normal">
+        <p>&copy; 2024 Mega Briquette. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+  <!-- ============= -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50" id="shisha"
+  onclick="outsideClickClose(event, 'shisha')">
+  <div class="bg-slate-200 max-w-6xl p-4 rounded-lg relative max-h-screen overflow-y-auto">
+    <!-- Mengatur w-full untuk lebar penuh dan padding -->
+    <button class="absolute right-2 bg-slate-300 text-slate-800 text-2xl font-bold px-2 rounded"
+      onclick="closePopup('shisha')">
+      &times;
+    </button>
+    <div class="flex justify-center items-center">
+      <div class="text-slate-800">
+        <img src="./img/10.png" alt="Shisha Briquette" class="w-full h-auto object-cover mb-4" />
+        <h1 class="font-semibold text-lg xs:text-md mt-4 text-gray-800">
+          Briket Shisha
+        </h1>
+        <p class="text-gray-600 tracking-wide text-base xs:text-sm text-justify">
+          Briket shisha, juga dikenal sebagai arang hookah, adalah arang
+          khusus yang dirancang untuk menghasilkan asap dari tembakau
+          beraroma dalam pipa air. Dibuat dari bahan alami, briket ini
+          membakar pada suhu lebih rendah, menghasilkan panas yang
+          konsisten dan tahan lama, serta meminimalkan produksi asap.
+          Dengan bentuk yang bervariasi, briket ini dapat meningkatkan
+          pengalaman merokok. Dengan keluaran panas yang stabil dan waktu
+          pembakaran yang lebih lama, briket shisha memberikan pengalaman
+          merokok yang lebih lembut dan menyenangkan.
+        </p>
+        <!-- Spesifikasi Produk -->
+        <div class="p-4">
+          <h1 class="font-semibold text-lg text-gray-800 xs:text-md">
+            Spesifikasi Produk
+          </h1>
+          <ul class="text-gray-600 text-base xs:text-sm list-inside space-y-2">
+            <li>Bahan Baku: 100% tempurung kelapa</li>
+            <li>Kadar Abu: 1.8% - 2.5%</li>
+            <li>Warna Abu: Abu-abu Muda / Alami</li>
+            <li>Waktu Pembakaran: 90 - 120 menit</li>
+            <li>Waktu Pengapian: < 4 menit</li>
+            <li>Nilai Kalori: 7000 - 7500 Kkal/kg</li>
+          </ul>
+        </div>
+        <a class="inline-flex items-center bg-gradient-to-r from-red-900 to-yellow-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+          onclick="closePopup('shisha')">
+          Close
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============= -->
+
+<!-- 2222222222222222 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50" id="hexagonal"
+  onclick="outsideClickClose(event, 'hexagonal')">
+  <div class="bg-slate-200 max-w-6xl p-4 rounded-lg relative max-h-screen overflow-y-auto">
+    <!-- Mengatur w-full untuk lebar penuh dan padding -->
+    <button class="absolute right-2 bg-slate-300 text-slate-800 text-2xl font-bold px-2 rounded"
+      onclick="closePopup('hexagonal')">
+      &times;
+    </button>
+    <div class="flex justify-center items-center">
+      <div class="text-slate-800">
+        <img src="./img/11.png" alt="Shisha Briquette" class="w-full h-auto object-cover mb-4" />
+        <h1 class="font-semibold text-lg xs:text-md mt-4 text-gray-800">
+          Briket Hexagonal
+        </h1>
+        <p class="text-gray-600 tracking-wide text-base xs:text-sm text-justify">
+          Briket hexagonal dari kami merupakan pilihan premium yang
+          terbuat dari 100% tempurung kelapa, dirancang untuk memberikan
+          performa pembakaran yang luar biasa. Bentuk segi enamnya
+          memastikan distribusi panas yang optimal dan pembakaran yang
+          tahan lama, jauh lebih unggul dibandingkan briket lainnya. Kami
+          menghadirkan briket hexagonal berkualitas tinggi yang ramah
+          lingkungan, bebas bahan kimia, dan bebas dari retakan.
+          Pemotongan yang presisi serta bentuk dan berat yang konsisten
+          menjadikan produk kami pilihan terbaik untuk keperluan BBQ
+          maupun pemanas rumah. Dengan daya tahan tinggi, panas maksimal,
+          serta produksi asap dan abu yang minim, briket hexagonal kami
+          tidak tertandingi dalam hal kualitas.
+        </p>
+        <!-- Spesifikasi Produk -->
+        <div class="p-4">
+          <h1 class="font-semibold text-lg p-2">Spesifikasi Produk</h1>
+          <ul class="text-gray-600 text-base xs:text-sm list-disc list-inside space-y-2">
+            <li>Bahan Baku: 100% tempurung kelapa</li>
+            <li>Kadar Abu: 1.8% - 2.5%</li>
+            <li>Warna Abu: Abu-abu Muda / Alami</li>
+            <li>Waktu Pembakaran: 90 - 120 menit</li>
+            <li>Waktu Pengapian: < 4 menit</li>
+            <li>Nilai Kalori: 7000 - 7500 Kkal/kg</li>
+          </ul>
+        </div>
+        <a class="inline-flex items-center bg-gradient-to-r from-red-900 to-yellow-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+          onclick="closePopup('hexagonal')">
+          Close
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 22222222222222 -->
+
+<!-- 33333333333333333 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50" id="bbq"
+  onclick="outsideClickClose(event, 'bbq')">
+  <div class="bg-slate-200 max-w-6xl p-4 rounded-lg relative max-h-screen overflow-y-auto">
+    <!-- Mengatur w-full untuk lebar penuh dan padding -->
+    <button class="absolute right-2 bg-slate-300 text-slate-800 text-2xl font-bold px-2 rounded"
+      onclick="closePopup('bbq')">
+      &times;
+    </button>
+    <div class="flex justify-center items-center">
+      <div class="text-slate-800">
+        <img src="./img/12.png" alt="Shisha Briquette" class="w-full h-auto object-cover mb-4" />
+        <h1 class="font-semibold text-lg xs:text-md mt-4 text-gray-800">
+          Briket Barbeque
+        </h1>
+        <p class="text-gray-600 tracking-wide text-base xs:text-sm text-justify">
+          Briket BBQ kami memiliki daya bakar yang kuat dan stabil,
+          menghasilkan panas tinggi yang merata, sehingga makanan dapat
+          matang dengan sempurna. Selain itu, produk ini minim asap dan
+          abu, menjaga kebersihan panggangan serta memberikan pengalaman
+          memanggang yang lebih nyaman dan bersih. Ketahanan pembakaran
+          yang lebih lama dibandingkan arang biasa memungkinkan Anda
+          menikmati sesi BBQ lebih panjang tanpa perlu sering menambahkan
+          briket. Briket BBQ ini memiliki bentuk dan ukuran yang seragam,
+          sehingga mudah digunakan dan memastikan hasil masakan yang
+          konsisten. Dengan keunggulan ramah lingkungan karena bebas dari
+          bahan kimia berbahaya, briket ini juga mudah dinyalakan dan siap
+          digunakan dalam waktu singkat, menjadikannya pilihan terbaik
+          untuk pengalaman BBQ yang berkualitas tinggi.
+        </p>
+        <!-- Spesifikasi Produk -->
+        <div class="p-4">
+          <h1 class="font-semibold text-lg p-2">Spesifikasi Produk</h1>
+          <ul class="text-gray-600 text-base xs:text-sm list-disc list-inside space-y-2">
+            <li>Bahan Baku: 100% tempurung kelapa</li>
+            <li>Kadar Abu: 1.8% - 2.5%</li>
+            <li>Warna Abu: Abu-abu Muda / Alami</li>
+            <li>Waktu Pembakaran: 90 - 120 menit</li>
+            <li>Waktu Pengapian: < 4 menit</li>
+            <li>Nilai Kalori: 7000 - 7500 Kkal/kg</li>
+          </ul>
+        </div>
+        <a class="inline-flex items-center bg-gradient-to-r from-red-900 to-yellow-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+          onclick="closePopup('bbq')">
+          Close
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 33333333333333333 -->
+</div>
+
+<!-- JavaScript to handle active link -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Fungsi untuk mengubah link yang aktif
+  const setActiveLink = (href) => {
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === href) {
+        link.classList.add("bg-gray-900", "text-white");
+        link.classList.remove(
+          "text-gray-300",
+          "hover:bg-gray-700",
+          "hover:text-white"
+        );
+      } else {
+        link.classList.remove("bg-gray-900", "text-white");
+        link.classList.add(
+          "text-gray-300",
+          "hover:bg-gray-700",
+          "hover:text-white"
+        );
+      }
+    });
+  };
+
+  // Inisialisasi link yang aktif saat halaman dimuat
+  const currentHash = window.location.hash || "/";
+  setActiveLink(currentHash);
+
+  // Tambahkan event listener untuk perubahan hash
+  window.addEventListener("hashchange", () => {
+    const newHash = window.location.hash || "/";
+    setActiveLink(newHash);
+  });
+});
+</script>
+
+<!-- script pop up -->
+<script>
+function showPopup(id) {
+  document.getElementById(id).classList.remove("hidden");
+  document.getElementById(id).classList.add("flex");
+}
+
+function closePopup(id) {
+  document.getElementById(id).classList.remove("flex");
+  document.getElementById(id).classList.add("hidden");
+}
+
+function outsideClickClose(event, id) {
+  // Tutup pop-up jika area di luar elemen yang diklik
+  const popupContent = document.querySelector(`#${id} > div`);
+  if (!popupContent.contains(event.target)) {
+    closePopup(id);
+  }
+}
+</script>
+
+</body>
+
+</html>

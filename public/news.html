@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="h-full">
+    <!-- start  -->
+    <div class="min-h-full">
+        <nav class="bg-slate-100 fixed top-0 left-0 w-full z-50 border-b-2 border-slate-900" x-data="{isOpen:false}">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <a href="#home" class="flex items-center">
+                                <img src="./img/LOGO.png" class="mr-3 h-6 sm:h-9" alt="mega briquette logo Logo" />
+                                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CV.
+                                    Mega Briquette</span>
+                            </a>
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4">
+                                <a href="home.html"
+                                    class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                                <a href="gallery.html"
+                                    class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                                <a href="produk.html"
+                                    class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Products</a>
+                                <a href="news.html"
+                                    class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
+                                <a href="contact.html"
+                                    class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-4 flex items-center md:ml-6"></div>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                        <button type="button" @click="isOpen = !isOpen"
+                            class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg :class="{'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg :class="{'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div x-show="isOpen" class="md:hidden" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3" @click="isOpen = false">
+                    <a href="home.html"
+                        class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="gallery.html"
+                        class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+                    <a href="produk.html"
+                        class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Products</a>
+                    <a href="news.html"
+                        class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">News</a>
+                    <a href="contact.html"
+                        class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- end -->
+
+        <!-- section pertama start -->
+
+        <!-- <section class=" mt-20  mx-4">
+            <div class="text-center py-6 max-w-4xl mx-auto rounded-3xl bg-primary-10">
+                <h1 class="text-white font-bold text-3xl">
+                    Contact <span class="text-primary-30">Us Company</span>
+                </h1>
+                <p class="text-white font-normal text-lg pt-2">
+                    Perusahaan kami terdiri dari team yang sangat terampil dan
+                    profesional.
+                </p>
+            </div>
+        </section> -->
+
+        <section class="mt-20 mx-4">
+            <div class="text-center py-6 max-w-4xl mx-auto rounded-3xl bg-primary-10 shadow-red-700 shadow-inner- relative">
+                <h1 class="text-white font-bold text-3xl">News <span class="text-primary-30 relative inline-block">Exclusive</span>
+                </h1>
+                <div class="hidden lg:block md:block sm:block handwritten-line"></div>
+                <p class="text-white font-normal text-lg pt-2">Kunjungi blog kami untuk detail lebih lanjut.</p>
+            </div>
+        </section>
+
+        <!-- section pertama end-->
+
+        <!-- section keduastart -->
+        <section class="max-w-7xl mx-auto">
+            <div class="py-4 px-4 lg:py-16 lg:px-6">
+                <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+                    
+                    <article class=" bg-slate-200 rounded-3xl border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 relative">
+                        <div class="flex justify-between items-center mb-5 text-gray-500 absolute right-4 top-4">
+                            <span class="bg-red-400 text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                                <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                                </svg>
+                                News
+                            </span>
+                        </div>
+        
+                        <!-- Menambahkan gambar -->
+                        <img class="w-full h-auto rounded-t-3xl mb-2" src="./img/30.png" alt="Blog Image">
+                    <div class="px-4 py-2">
+                        <h2 class="mb-2 md:text-xl text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">Keunggulan Briket Arang Kelapa: Bahan Bakar Ramah Lingkungan untuk Rumah dan Industri</a>
+                        </h2>
+        
+                        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                            Briket arang kelapa telah menjadi pilihan populer sebagai bahan bakar alternatif karena keunggulannya yang ramah lingkungan...
+                        </p>
+        
+                        <div class="flex justify-between items-center">
+                            <!-- <div class="flex items-center space-x-4">
+                                <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
+                                <span class="font-medium dark:text-white">Jese Leos</span>
+                            </div> -->
+                            <a href="#" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                                Read more
+                                <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </article>
+                    
+                    <article class=" bg-slate-200 rounded-3xl border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 relative">
+                        <div class="flex justify-between items-center mb-5 text-gray-500 absolute right-4 top-4">
+                            <span class="bg-red-400 text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                                <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                                </svg>
+                                News
+                            </span>
+                        </div>
+        
+                        <!-- Menambahkan gambar -->
+                        <img class="w-full h-auto rounded-t-3xl mb-2" src="./img/31.png" alt="Blog Image">
+                    <div class="px-4 py-2">
+                        <h2 class="mb-2 text-xl md:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">Inovasi Terbaru dalam Produksi Briket Arang: Solusi untuk Energi Bersih</a>
+                        </h2>
+        
+                        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                            Industri briket arang terus mengalami perkembangan dengan berbagai inovasi terbaru yang bertujuan meningkatkan efisiensi dan keberlanjutan...
+                        </p>
+        
+                        <div class="flex justify-between items-center">
+                            <!-- <div class="flex items-center space-x-4">
+                                <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
+                                <span class="font-medium dark:text-white">Jese Leos</span>
+                            </div> -->
+                            <a href="#" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                                Read more
+                                <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </article>
+                    
+                    <article class=" bg-slate-200 rounded-3xl border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 relative">
+                        
+                        <div class="flex justify-between items-center mb-5 text-gray-500 absolute right-4 top-4">
+                            <span class="bg-red-400 text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                                <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                                </svg>
+                                News
+                            </span>
+                        </div>
+                        <img class="w-full h-auto rounded-t-3xl mb-2" src="./img/32.png" alt="Blog Image">
+                        <!-- Menambahkan gambar -->
+                    <div class="px-4 py-2">
+                        <h2 class="mb-2 text-xl md:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">Manfaat Briket Arang Kelapa untuk Kehidupan Sehari-hari</a>
+                        </h2>
+        
+                        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                            Briket arang kelapa memiliki banyak manfaat yang dapat dirasakan dalam kehidupan sehari-hari. Salah satu manfaat utamanya adalah sebagai...
+                        </p>
+        
+                        <div class="flex justify-between items-center">
+                            <!-- <div class="flex items-center space-x-4">
+                                <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
+                                <span class="font-medium dark:text-white">Jese Leos</span>
+                            </div> -->
+                            <a href="#" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                                Read more
+                                <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </article>
+                  
+                </div>
+            </div>
+        </section>
+        
+        <!-- section keduasend -->
+        <!-- section ketiga start -->
+
+
+        <!-- section ketiga end -->
+
+
+
+        <!-- footer start -->
+
+        <footer class="bg-primary-30 text-white pt-6">
+            <div class="container mx-auto flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0">
+                <!-- Logo Section -->
+                <div class="flex flex-col">
+                    <a href="#" class="flex mb-6 mx-6 lg:mx-0">
+                        <img src="./img/logowh.png" alt="Logo Mega Briquette" class="w-32" />
+                    </a>
+                    <div>
+                        <a href="https://wa.me/0813545456565"
+                            class="mx-6 lg:mx-0 inline-flex items-center bg-gradient-to-r from-green-400 to-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links Section -->
+                <div class="flex flex-col mx-6">
+                    <a href="home.html" class="hover:text-red-400 transition-colors font-semibold">Akses All Page</a>
+                    <a href="home.html" class="hover:text-red-400 transition-colors">Home</a>
+                    <a href="gallery.html" class="hover:text-red-400 transition-colors">Gallery</a>
+                    <a href="produk.html" class="hover:text-red-400 transition-colors">Products</a>
+                    <a href="news.html" class="hover:text-red-400 transition-colors">News</a>
+                    <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+                </div>
+
+                <!-- Social Media Links Section -->
+                <div class="flex flex-col mx-6">
+                    <a href="#" class="hover:text-red-400 transition-colors font-semibold">Contact Us</a>
+                    <a href="#" class="hover:text-red-400 transition-colors">admmega@gmail.com</a>
+                    <a href="https://wa.me/628888990888" class="hover:text-red-400 transition-colors">(+62)888 8990
+                        888</a>
+                    <a href="https://wa.me/628888990888" class="hover:text-red-400 transition-colors">(+62)888 8990
+                        888</a>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center mt-4 bg-slate-800 text-white font-normal">
+                <p>&copy; 2024 Mega Briquette. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- footer end -->
+    </div>
+
+    <!-- JavaScript to handle active link -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            // Fungsi untuk mengubah link yang aktif
+            const setActiveLink = (href) => {
+                navLinks.forEach((link) => {
+                    if (link.getAttribute("href") === href) {
+                        link.classList.add("bg-gray-900", "text-white");
+                        link.classList.remove(
+                            "text-gray-300",
+                            "hover:bg-gray-700",
+                            "hover:text-white"
+                        );
+                    } else {
+                        link.classList.remove("bg-gray-900", "text-white");
+                        link.classList.add(
+                            "text-gray-300",
+                            "hover:bg-gray-700",
+                            "hover:text-white"
+                        );
+                    }
+                });
+            };
+
+            // Inisialisasi link yang aktif saat halaman dimuat
+            const currentHash = window.location.hash || "/";
+            setActiveLink(currentHash);
+
+            // Tambahkan event listener untuk perubahan hash
+            window.addEventListener("hashchange", () => {
+                const newHash = window.location.hash || "/";
+                setActiveLink(newHash);
+            });
+        });
+    </script>
+
+<!-- <script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script> -->
+
+</body>
+
+</html>

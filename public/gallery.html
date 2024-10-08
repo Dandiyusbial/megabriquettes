@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="h-full">
+  <!-- start  -->
+  <div class="min-h-full">
+    <nav class="bg-slate-100 fixed top-0 left-0 w-full z-50 border-b-2 border-slate-900" x-data="{isOpen:false}">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="#home" class="flex items-center">
+                <img src="./img/LOGO.png" class="mr-3 h-6 sm:h-9" alt="mega briquette logo Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CV. Mega
+                  Briquette</span>
+              </a>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a href="home.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="gallery.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="produk.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Products</a>
+                <a href="news.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
+                <a href="contact.html"
+                  class="nav-link text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6"></div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button type="button" @click="isOpen = !isOpen"
+              class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg :class="{'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg :class="{'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div x-show="isOpen" class="md:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3" @click="isOpen = false">
+          <a href="home.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="gallery.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+          <a href="produk.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Products</a>
+          <a href="news.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">News</a>
+          <a href="contact.html"
+            class="nav-link block text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- end -->
+
+
+
+
+    <!-- section ketiga start -->
+    <section class="mt-10 bg-cover bg-center "  style="background-image: url('./img/17.png');">
+        
+      <div class="max-w-7xl mx-auto py-10 lg:py-12 grid grid-cols-2 lg:grid-cols-4 w-full gap-4">
+        <!-- Card 1 -->
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <!-- <img src="./img/1.png" alt="Natural Icon" class="lg:h-12 h-10 mx-auto"> -->
+          <div class="text-center lg:text-start">
+            <h3 class="text-2xl font-bold">25 +</h3>
+            <p class="text-gray-700 font-bold">Trusted Client</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <!-- <img src="./img/2.png" alt="Natural Icon" class="lg:h-12 h-10 mx-auto"> -->
+          <div class="text-center lg:text-start">
+            <h3 class="text-2xl font-bold">1500</h3>
+            <p class="text-gray-700 font-bold">Completed Project</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <!-- <img src="./img/3.png" alt="Natural Icon" class="lg:h-12 h-10 mx-auto"> -->
+          <div class="text-center lg:text-start">
+            <h3 class="text-2xl font-bold">300</h3>
+            <p class="text-gray-700 font-bold">Profesionals</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <!-- <img src="./img/4.png" alt="Natural Icon" class="lg:h-12 h-10 mx-auto"> -->
+          <div class="text-center lg:text-start">
+            <h3 class="text-2xl font-bold">20 +</h3>
+            <p class="text-gray-700 font-bold">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section pertama end -->
+
+    <!-- section kedua start -->
+    
+<section class="max-w-7xl mx-auto">
+    <div class="mt-10 px-4">
+        <h1 class="text-xl font-bold lg:text-4xl text-center mb-2">GALERI</h1>
+        <h2 class="text-lg  font-semibold  lg:text-xl text-center mb-4">Kegiatan Kami</h2>
+        <p class="text-center mb-8">
+            Anda dapat melihat galeri kami di sini, klik untuk melihat koleksi kami. 
+            Anda dapat melihat aktivitas harian kami dan produk yang diekspor ke banyak negara.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <img src="./img/18.png" alt="Kegiatan 1" class="w-full h-auto object-cover rounded-lg">
+            <img src="./img/19.png" alt="Kegiatan 2" class="w-full h-auto object-cover rounded-lg">
+            <img src="./img/20.png" alt="Kegiatan 3" class="w-full h-auto object-cover rounded-lg">
+            <img src="./img/21.png" alt="Kegiatan 4" class="w-full h-auto object-cover rounded-lg">
+            <img src="./img/22.png" alt="Kegiatan 5" class="w-full h-auto object-cover rounded-lg">
+            <img src="./img/23.png" alt="Kegiatan 6" class="w-full h-auto object-cover rounded-lg">
+        </div>
+    </div>
+</section>
+<!-- section kedua end -->
+
+
+
+<!-- section ke tiga start-->
+<section class="max-w-7xl mx-auto">
+  <div class="my-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+      <!-- Kolom Kiri: 1/3 Lebar -->
+      <div class="bg-primary-30 text-white p-6 rounded-lg flex flex-col items-center text-center md:col-span-1">
+        <img src="./img/25.png" alt="">
+        <h2 class="text-xl font-semibold mb-2">Briquette Berkualitas Terverifikasi</h2>
+        <p class="mb-4">
+          Diproses secara teliti dan diuji oleh para ahli untuk memastikan kualitas terbaik.
+        </p>
+        <img src="./img/26.png" alt="">
+        <h3 class="font-semibold mb-2">Briquette Alami untuk Masa Depan yang Lebih Baik</h3>
+        <p>
+          Terbuat dari 100% bahan alami, dengan komposisi ramah lingkungan.
+        </p>
+      </div>
+
+      <!-- Kolom Kanan: 2/3 Lebar -->
+      <div class="bg-red-300 shadow-lg rounded-lg p-6 grid grid-cols-1 gap-6 md:col-span-2">
+        <div class="grid grid-cols-1">
+          <h2 class="text-2xl font-bold mb-2">Briket Industries</h2>
+          <p class="mb-4">
+            Kami adalah supplier briket ternama dan memiliki kredibilitas tinggi dari Indonesia yang menyediakan berbagai macam jenis produk briket dengan harga yang terjangkau dan kualitas terbaik.
+          </p>
+          <p>
+            Kami akan dengan senang hati menjadi mitra bisnis dan pemasok Anda, menyediakan produk kelapa terbaik yang bisa Anda dapatkan. Kami berkomitmen penuh kepada pelanggan kami.
+          </p>
+          <div class="border-b-2 border-slate-400 mt-6"></div>
+          <div class="mt-2 mx-auto flex gap-4 items-center">
+            <img src="./img/lg.png" alt="">
+            <h1 class="font-medium text-4xl font-rouge-script">Mega Briquette</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section ke tiga end-->
+
+
+<!-- section ke empat start-->
+
+<section class="max-w-4xl mx-auto">
+  <div class="my-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+      <!-- Kolom Kiri: 1/3 Lebar -->
+      <div class="bg-red-800 text-white rounded-lg md:col-span-1 flex justify-center items-center py-4">
+        <h2 class="text-xl font-semibold mb-2">Team Kami</h2>
+      </div>
+
+      <!-- Kolom Kanan: 2/3 Lebar -->
+      <div class=" grid grid-cols-1 gap-2 md:col-span-2">
+        <div class="flex gap-2">
+          <!-- Gambar Pertama -->
+          <div class="relative overflow-hidden w-full xs:w-1/2 group shadow-lg rounded-3xl"> <!-- Tambahkan 'group' untuk mengontrol hover -->
+            <img src="./img/28.png" alt="Cewek" class="w-full h-auto object-cover rounded-3xl transition-transform duration-500 ease-in-out group-hover:scale-110"> <!-- Efek zoom hanya di sini -->
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span class="text-white text-2xl font-semibold">Amaris</span>
+            </div>
+          </div>
+
+          <!-- Gambar Kedua -->
+          <div class="relative overflow-hidden  w-full xs:w-1/2 group shadow-lg  rounded-3xl"> <!-- Tambahkan 'group' untuk mengontrol hover -->
+            <img src="./img/27.png" alt="Cowok" class="w-full h-auto object-cover rounded-3xl transition-transform duration-500 ease-in-out group-hover:scale-110"> <!-- Efek zoom hanya di sini -->
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span class="text-white text-2xl font-semibold">Stellan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- section ke empat end-->
+
+
+    <!-- footer start -->
+
+    <footer class="bg-primary-30 text-white pt-6">
+      <div class="container mx-auto flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0">
+        <!-- Logo Section -->
+        <div class="flex flex-col">
+          <a href="#" class="flex mb-6 mx-6 lg:mx-0">
+            <img src="./img/logowh.png" alt="Logo Mega Briquette" class="w-32" />
+          </a>
+          <div>
+            <a href="https://wa.me/0813545456565"
+              class="mx-6 lg:mx-0 inline-flex items-center bg-gradient-to-r from-green-400 to-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links Section -->
+        <div class="flex flex-col mx-6">
+          <a href="home.html" class="hover:text-red-400 transition-colors font-semibold">Akses All Page</a>
+          <a href="home.html" class="hover:text-red-400 transition-colors">Home</a>
+          <a href="gallery.html" class="hover:text-red-400 transition-colors">Gallery</a>
+          <a href="produk.html" class="hover:text-red-400 transition-colors">Products</a>
+          <a href="news.html" class="hover:text-red-400 transition-colors">News</a>
+          <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+        </div>
+
+        <!-- Social Media Links Section -->
+        <div class="flex flex-col mx-6">
+          <a href="#" class="hover:text-red-400 transition-colors font-semibold">Contact Us</a>
+          <a href="#" class="hover:text-red-400 transition-colors">admmega@gmail.com</a>
+          <a href="https://wa.me/628888990888" class="hover:text-red-400 transition-colors">(+62)888 8990 888</a>
+          <a href="https://wa.me/628888990888" class="hover:text-red-400 transition-colors">(+62)888 8990 888</a>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="text-center mt-4 bg-slate-800 text-white font-normal">
+        <p>&copy; 2024 Mega Briquette. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+   
+
+  </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.handwritten-line {
+    position: absolute;
+    bottom: 54px; /* Menempatkan garis di bawah teks */
+    left: 56%; /* Menempatkan di tengah */
+    transform: translateX(-50%); /* Mengoreksi posisi garis ke tengah */
+    width: 1000px; /* Panjang garis */
+    height: 4px; /* Ketebalan garis */
+    background: linear-gradient(90deg, transparent, #FFD700, transparent); /* Ganti dengan kode hex */
+    animation: handwriting 8s infinite;
+}
+
+@keyframes handwriting {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 300px; /* Panjang akhir garis */
+    }
+    100% {
+        width: 0; /* Kembali ke panjang awal */
+    }
+}
